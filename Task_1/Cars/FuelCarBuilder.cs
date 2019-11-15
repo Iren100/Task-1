@@ -24,11 +24,6 @@ namespace Task_1
             fuelCar.EngineCapacity = engineCapacity;
             return this;
         }
-        public FuelCarBuilder SetFuelConsumption(int fuelConsumption)
-        {
-            fuelCar.FuelConsumption = fuelConsumption;
-            return this;
-        }
         public IFuel Build()
         {
             return fuelCar;

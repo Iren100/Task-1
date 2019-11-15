@@ -1,9 +1,13 @@
 ﻿using Task_1.Enums;
+using Task_1.Cars.Interfases;
+using System;
 
 namespace Task_1
 {
-    public class Car
-    {       
+    public class Car: IElement
+    {
+        public Guid Id { get; private set; }
+
         public string Name { get; set; }
 
         public int Year { get; set; }
@@ -22,5 +26,8 @@ namespace Task_1
 
         //производитель
         public Manufacturer Manufacturer { get; set; }
+
+        //расход топлива/энергии
+        public int FuelConsumption { get; set; }
     }
 }

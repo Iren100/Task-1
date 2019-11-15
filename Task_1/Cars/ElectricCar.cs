@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Task_1.Enums;
 using Task_1.Cars.Interfases;
 
@@ -11,24 +7,28 @@ namespace Task_1
     //электрический
     class ElectricCar : Car, IElectric
     {
-       
+        public string TypeBattery { get; set; }
+        public TimeSpan LifeBattery { get; set; }
 
-     
-
-        public string TypeBattery { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public TimeSpan LifeBattery { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public ElectricCar(Manufacturer manufacturer, int price, int year, int maxSpeed)
-         : base()
+        public ElectricCar(string name, int year, int price, int maxSpeed, int seatsNumber,
+                         TransmissionType transmissionType, BodyType bodyType, Manufacturer manufacturer, int fuelConsumption,
+                         string typeBattery, TimeSpan lifeBattery)
         {
-
-            //TypeBattery = fuelType;
-            //LifeBattery = fuelTankCapacity;
+            CreateCarBuilder(this).SetName(name).SetYear(year).SetPrice(price).SetMaxSpeed(maxSpeed).SeatsNumber(seatsNumber)
+                                   .SetTransmissionType(TransmissionType).SetBodyType(BodyType).SetManufacturer(manufacturer)
+                                   .SetFuelConsumption(fuelConsumption).Build();
+            CreateElectricCarBuilder(this).SetTypeBattery("Battery1").SetLifeBattery(new TimeSpan()).Build();
         }
 
-        //public override string ToString()
-        //{
-        //    return "Gas car: " + base.ToString() + $", Fuel Type: {FuelType}, FuelTank Capacity: {FuelTankCapacity}, Fuel Economy: {FuelEconomy} ";
-        //}
+        //Fluent Builder
+        public static CarBuilder CreateCarBuilder(Car car)
+        {
+            return new CarBuilder(car);
+        }
+        //Fluent Builder
+        public static ElectricCarBuilder CreateElectricCarBuilder(IElectric electricCar)
+        {
+            return new ElectricCarBuilder(electricCar);
+        }
     }
 }

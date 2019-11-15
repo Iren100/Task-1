@@ -49,6 +49,11 @@ namespace Task_1
             car.Manufacturer = manufacturer;
             return this;
         }
+        public CarBuilder SetFuelConsumption(int fuelConsumption)
+        {
+            car.FuelConsumption = fuelConsumption;
+            return this;
+        }
         public Car Build()
         {
             return car;

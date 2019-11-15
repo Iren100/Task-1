@@ -5,7 +5,6 @@ namespace Task_1.Enums
     /// <summary>
     /// Производитель
     /// </summary>
-    [Flags]
     public enum Manufacturer
     {      
         /// <summary>

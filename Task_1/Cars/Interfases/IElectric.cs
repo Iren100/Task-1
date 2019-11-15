@@ -3,7 +3,7 @@
 namespace Task_1.Cars.Interfases
 {
     //электрическое авто
-    interface IElectric
+    public interface IElectric
     {
         //тип батареи
         String TypeBattery { get; set; }

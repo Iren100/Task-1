@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using Task_1.Enums;
+using Task_1.Cars;
 
 namespace Task_1
 {
@@ -7,17 +10,46 @@ namespace Task_1
     {
         static void Main(string[] args)
         {
+            var taksoPark = new TaksoParkStorage(new List<Car>());
 
-            //new GasCar(Manufacturer.Audi, Type.Coupe, "T9", 50000, 2017, 155, 0, 5.3f, 2, true, true, "gasoline", 50, 26),
-            //new ElectricCar(Manufacturer.Tesla, Type.Coupe, "Model S", 85000, 2016, 241, 405, 2.5f, 5, true, true, "Lithium ion", 570, 220),
-            //new GasCar(Manufacturer.Mitsubishi, Type.Hatchback, "Colt", 10000, 2014, 120, 50, 6.3f, 5, true, true, "gasoline", 50, 20),
-            //new ElectricCar(Manufacturer.Nissan, Type.Hatchback, "Leaf", 15000, 2016, 241, 405, 2.5f, 5, true, true, "Lithium ion", 400, 180),
+            DieselCar dieselCar = new DieselCar("Auto1", 2012, 10000, 120, 1,
+                                           TransmissionType.Automatic, BodyType.Crossover, Manufacturer.Skoda, 10, 
+                                           100, 5, 5);
 
-            DieselCar car = new DieselCar("Auto1", 2012, 10000, 220, 1,
-                                           TransmissionType.Automatic, BodyType.Crossover, Manufacturer.Skoda, 
-                                           100, 6, 3, 100);
 
-            Console.WriteLine(" " + car.Name + " " + car.Year + " " + car.TankCapacity);
+            ElectricCar electricCar = new ElectricCar("Auto2", 2013, 20000, 220, 2,
+                                          TransmissionType.Robotic, BodyType.Minivan, Manufacturer.BMW, 8,
+                                          "", new TimeSpan());
+
+            HybridCar hybridCar = new HybridCar("Auto3", 2014, 30000, 320, 3,
+                                          TransmissionType.Manual, BodyType.Sedan, Manufacturer.Nissan, 6,
+                                          100, 3, 5, "", new TimeSpan());
+
+            Console.WriteLine("Taksopark:");
+            Console.WriteLine(" " + dieselCar.Name + " " + dieselCar.Year + " " + dieselCar.TankCapacity);
+            Console.WriteLine(" " + electricCar.Name + " " + electricCar.Year + " " + electricCar.TypeBattery);
+            Console.WriteLine(" " + hybridCar.Name + " " + hybridCar.Year + " " + hybridCar.TankCapacity + " " + electricCar.TypeBattery);
+
+            taksoPark.AddCar(dieselCar);
+            taksoPark.AddCar(electricCar);
+            taksoPark.AddCar(hybridCar);
+
+            Console.WriteLine();
+
+            long carsSumPrice = taksoPark.CalculateCarsSumPrice(taksoPark.Items);
+            Console.WriteLine($"Autopark sum price: ${carsSumPrice}" + "\r\n");
+
+            Console.WriteLine("Finding for speeds:");
+            IEnumerable<Car> carsBySpeed = taksoPark.FindSpeed(taksoPark.Items, 100, 190);
+            if (carsBySpeed.Count() == 0)
+                Console.WriteLine("No cars for speeds" + "\r\n");
+            else foreach (Car car in carsBySpeed)
+                    Console.WriteLine(car + "\r\n");
+
+            Console.WriteLine("Sorting cars by fuel consumption:");
+            IEnumerable<Car> sortedListFuel = taksoPark.SortFuel(taksoPark.Items);
+            foreach (var car in sortedListFuel)
+                Console.WriteLine(car + "\r\n");
 
             Console.ReadLine();
         }

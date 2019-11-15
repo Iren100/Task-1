@@ -12,8 +12,5 @@ namespace Task_1.Cars.Interfases
 
         //объем двигателя
         int EngineCapacity { get; set; }
-
-        //расход топлива
-        int FuelConsumption { get; set; }
     }
 }

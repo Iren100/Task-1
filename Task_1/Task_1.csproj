@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cars\FuelCar.cs" />
+    <Compile Include="Cars\ElectricCarBuilder.cs" />
     <Compile Include="Cars\FuelCarBuilder.cs" />
     <Compile Include="Cars\Car.cs" />
     <Compile Include="Cars\CarBuilder.cs" />
@@ -54,12 +55,16 @@
     <Compile Include="Cars\Enums\BodyType.cs" />
     <Compile Include="Cars\ElectricCar.cs" />
     <Compile Include="Cars\DieselCar.cs" />
+    <Compile Include="Cars\Interfases\ICarList.cs" />
     <Compile Include="Cars\Interfases\IElectric.cs" />
+    <Compile Include="Cars\Interfases\IElement.cs" />
     <Compile Include="Cars\Interfases\IFuel.cs" />
     <Compile Include="Cars\Interfases\ILoadingCapacity.cs" />
     <Compile Include="Cars\Interfases\IPassenger.cs" />
+    <Compile Include="Cars\Interfases\ITaksoParkStorage.cs" />
     <Compile Include="Cars\PetrolCar.cs" />
     <Compile Include="Cars\GasCar.cs" />
+    <Compile Include="Cars\TaksoParkStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
