@@ -26,13 +26,11 @@ namespace Task_1
                                           100, 3, 5, "", new TimeSpan());
 
             Console.WriteLine("Taksopark:");
-            Console.WriteLine(" " + dieselCar.Name + " " + dieselCar.Year + " " + dieselCar.TankCapacity);
-            Console.WriteLine(" " + electricCar.Name + " " + electricCar.Year + " " + electricCar.TypeBattery);
-            Console.WriteLine(" " + hybridCar.Name + " " + hybridCar.Year + " " + hybridCar.TankCapacity + " " + electricCar.TypeBattery);
+            Console.WriteLine(dieselCar.Name + " " + dieselCar.Year + " " + dieselCar.TankCapacity);
+            Console.WriteLine(electricCar.Name + " " + electricCar.Year + " " + electricCar.TypeBattery);
+            Console.WriteLine(hybridCar.Name + " " + hybridCar.Year + " " + hybridCar.TankCapacity + " " + electricCar.TypeBattery);
 
-            taksoPark.AddCar(dieselCar);
-            taksoPark.AddCar(electricCar);
-            taksoPark.AddCar(hybridCar);
+            taksoPark.AddCars(new List<Car>() { dieselCar, electricCar, hybridCar });
 
             Console.WriteLine();
 
@@ -44,12 +42,12 @@ namespace Task_1
             if (carsBySpeed.Count() == 0)
                 Console.WriteLine("No cars for speeds" + "\r\n");
             else foreach (Car car in carsBySpeed)
-                    Console.WriteLine(car + "\r\n");
+                    Console.WriteLine(car.Name + "\r\n");
 
             Console.WriteLine("Sorting cars by fuel consumption:");
             IEnumerable<Car> sortedListFuel = taksoPark.SortFuel(taksoPark.Items);
             foreach (var car in sortedListFuel)
-                Console.WriteLine(car + "\r\n");
+                Console.WriteLine(car.Name);
 
             Console.ReadLine();
         }

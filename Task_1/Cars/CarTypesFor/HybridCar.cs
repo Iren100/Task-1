@@ -1,11 +1,12 @@
 ﻿using System;
 using Task_1.Enums;
 using Task_1.Cars.Interfases;
+using Task_1.Cars;
 
 namespace Task_1
 {
     //гибридный
-    class HybridCar : FuelCar, IElectric
+    public class HybridCar : FuelCar, IElectric
     {
         public string TypeBattery { get; set; }
         public TimeSpan LifeBattery { get; set; }
@@ -18,13 +19,12 @@ namespace Task_1
                   transmissionType, bodyType, manufacturer, fuelConsumption,
                   tankCapacity, numberOfCylinders, engineCapacity)
         {
-            CreateElectricCarBuilder(this).SetTypeBattery("Battery1").SetLifeBattery(new TimeSpan()).Build();
+            CarBuilders.CreateElectricCarBuilder(this).SetTypeBattery("Battery1").SetLifeBattery(new TimeSpan()).Build();
         }
 
-        //Fluent Builder
-        public static ElectricCarBuilder CreateElectricCarBuilder(IElectric electricCar)
+        public override void Run()
         {
-            return new ElectricCarBuilder(electricCar);
+            Console.WriteLine("Гибридное авто");
         }
     }
 }

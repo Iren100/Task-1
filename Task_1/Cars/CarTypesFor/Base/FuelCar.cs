@@ -1,10 +1,12 @@
-﻿using Task_1.Enums;
+﻿using System;
+using Task_1.Enums;
 using Task_1.Cars.Interfases;
+using Task_1.Cars;
 
 namespace Task_1
 {
-    //дизельный
-    class FuelCar : Car, IFuel
+    //авто на топливе
+    public class FuelCar : Car, IFuel
     {   
         public int TankCapacity { get; set; }
         public int NumberOfCylinders { get; set; }
@@ -14,21 +16,15 @@ namespace Task_1
                          TransmissionType transmissionType, BodyType bodyType, Manufacturer manufacturer, int fuelConsumption,
                          int tankCapacity, int numberOfCylinders, int engineCapacity)
         {
-            CreateCarBuilder(this).SetName(name).SetYear(year).SetPrice(price).SetMaxSpeed(maxSpeed).SeatsNumber(seatsNumber)
+            CarBuilders.CreateCarBuilder(this).SetName(name).SetYear(year).SetPrice(price).SetMaxSpeed(maxSpeed).SeatsNumber(seatsNumber)
                                     .SetTransmissionType(TransmissionType).SetBodyType(BodyType).SetManufacturer(manufacturer).SetFuelConsumption(fuelConsumption).Build();
-            CreateFuelCarBuilder(this).SetTankCapacity(tankCapacity).SetNumberOfCylinders(numberOfCylinders)
+            CarBuilders.CreateFuelCarBuilder(this).SetTankCapacity(tankCapacity).SetNumberOfCylinders(numberOfCylinders)
                                         .SetEngineCapacity(engineCapacity).Build();
         }
 
-        //Fluent Builder
-        public static CarBuilder CreateCarBuilder(Car car)
+        public override void Run()
         {
-            return new CarBuilder(car);
-        }
-        //Fluent Builder
-        public static FuelCarBuilder CreateFuelCarBuilder(IFuel fuelCar)
-        {
-            return new FuelCarBuilder(fuelCar);
+            Console.WriteLine("Авто на топливе");
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using Task_1.Enums;
+﻿using System;
+using Task_1.Enums;
 using Task_1.Cars.Interfases;
-using System;
 
 namespace Task_1
 {
@@ -29,5 +29,10 @@ namespace Task_1
 
         //расход топлива/энергии
         public int FuelConsumption { get; set; }
+
+        public virtual void Run()
+        {
+            Console.WriteLine("Автомобиль");
+        }
     }
 }

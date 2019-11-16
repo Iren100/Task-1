@@ -1,9 +1,10 @@
-﻿using Task_1.Enums;
+﻿using System;
+using Task_1.Enums;
 
 namespace Task_1
 {
     //дизельный
-    class DieselCar : FuelCar
+    public class DieselCar : FuelCar
     {
         //тип топлива
         public const FuelType TypeFuel = FuelType.Diesel;
@@ -15,6 +16,11 @@ namespace Task_1
                   transmissionType, bodyType, manufacturer, fuelConsumption,
                   tankCapacity, numberOfCylinders, engineCapacity)
         {
+        }
+
+        public override void Run()
+        {
+            Console.WriteLine("Дизельный авто");
         }
     }
 }

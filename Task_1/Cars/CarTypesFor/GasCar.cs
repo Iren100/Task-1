@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Task_1.Enums;
 
 namespace Task_1
 {
     //на газу
-    class GasCar : FuelCar
+    public class GasCar : FuelCar
     {
         //тип топлива
         public const FuelType TypeFuel = FuelType.Gas;
@@ -18,6 +16,11 @@ namespace Task_1
                   transmissionType, bodyType, manufacturer, fuelConsumption,
                   tankCapacity, numberOfCylinders, engineCapacity)
         {
+        }
+
+        public override void Run()
+        {
+            Console.WriteLine("Авто на газу");
         }
     }
 }

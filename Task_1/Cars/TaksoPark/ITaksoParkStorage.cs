@@ -7,6 +7,8 @@ namespace Task_1.Cars.Interfases
     {
         void AddCar(Car car);
 
+        void AddCars(IEnumerable<Car> cars);
+
         void RemoveCar(Guid id);
 
         Car CarFindById(Guid id);

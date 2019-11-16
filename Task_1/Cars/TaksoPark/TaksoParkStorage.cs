@@ -21,6 +21,13 @@ namespace Task_1.Cars
             Items.Add(car);
         }
 
+        public void AddCars(IEnumerable<Car> cars)
+        {
+            var listCar = Items.ToList();
+            listCar.AddRange(cars);
+            Items = listCar;
+        }
+
         public void RemoveCar(Guid id)
         {
             Items.Remove(CarFindById(id));
