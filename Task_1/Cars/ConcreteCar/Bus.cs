@@ -1,4 +1,5 @@
-﻿using Task_1.Cars.Interfases;
+﻿using System;
+using Task_1.Cars.Interfases;
 using Task_1.Enums;
 
 namespace Task_1
@@ -20,5 +21,11 @@ namespace Task_1
         {
             return passengers;
         }
+
+        public override void Run()
+        {
+            Console.WriteLine("Пассажирский автомобиль");
+        }
+        
     }
 }
