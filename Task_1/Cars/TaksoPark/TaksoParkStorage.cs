@@ -43,18 +43,18 @@ namespace Task_1.Cars
             return Items.Where(f => f.Name == name).ToList();
         }
 
-        public long CalculateCarsSumPrice(IEnumerable<Car> cars)
+        public long CalculateCarsSumPrice()
         {
             long sum = 0;
-            foreach (Car car in cars)
+            foreach (Car car in Items)
                 sum = sum + car.Price;
             return sum;
         }
 
-        public IEnumerable<Car> FindSpeed(IEnumerable<Car> cars, int min, int max)
+        public IEnumerable<Car> FindSpeed(int min, int max)
         {
             List<Car> carSelection = new List<Car>();
-            foreach (Car car in cars)
+            foreach (Car car in Items)
             {
                 if (car.MaxSpeed >= min && car.MaxSpeed <= max)
                     carSelection.Add(car);
@@ -62,13 +62,13 @@ namespace Task_1.Cars
             return carSelection;
         }
 
-        public IEnumerable<Car> SortFuel(IEnumerable<Car> cars)
+        public IEnumerable<Car> SortFuel()
         {
             List<Car> Cars = new List<Car>();
-            if (cars.Count() == 0)
+            if (Items.Count() == 0)
                 Console.WriteLine("No cars!");
 
-            foreach (Car car in cars)
+            foreach (Car car in Items)
                 Cars.Add(car);
 
             Cars.Sort((car1, car2) => car1.FuelConsumption.CompareTo(car2.FuelConsumption));

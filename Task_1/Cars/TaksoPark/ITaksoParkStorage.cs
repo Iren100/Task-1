@@ -15,10 +15,10 @@ namespace Task_1.Cars.Interfases
 
         IEnumerable<Car> CarsFindByName(string name);
 
-        long CalculateCarsSumPrice(IEnumerable<Car> cars);
+        long CalculateCarsSumPrice();
 
-        IEnumerable<Car> FindSpeed(IEnumerable<Car> cars, int min, int max);
+        IEnumerable<Car> FindSpeed(int min, int max);
 
-        IEnumerable<Car> SortFuel(IEnumerable<Car> cars);       
+        IEnumerable<Car> SortFuel();       
     }
 }

@@ -34,18 +34,18 @@ namespace Task_1
 
             Console.WriteLine();
 
-            long carsSumPrice = taksoPark.CalculateCarsSumPrice(taksoPark.Items);
+            long carsSumPrice = taksoPark.CalculateCarsSumPrice();
             Console.WriteLine($"Autopark sum price: ${carsSumPrice}" + "\r\n");
 
             Console.WriteLine("Finding for speeds:");
-            IEnumerable<Car> carsBySpeed = taksoPark.FindSpeed(taksoPark.Items, 100, 190);
+            IEnumerable<Car> carsBySpeed = taksoPark.FindSpeed(100, 190);
             if (carsBySpeed.Count() == 0)
                 Console.WriteLine("No cars for speeds" + "\r\n");
             else foreach (Car car in carsBySpeed)
                     Console.WriteLine(car.Name + "\r\n");
 
             Console.WriteLine("Sorting cars by fuel consumption:");
-            IEnumerable<Car> sortedListFuel = taksoPark.SortFuel(taksoPark.Items);
+            IEnumerable<Car> sortedListFuel = taksoPark.SortFuel();
             foreach (var car in sortedListFuel)
                 Console.WriteLine(car.Name);
 

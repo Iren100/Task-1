@@ -1,11 +1,9 @@
-﻿using System;
-
+﻿
 namespace Task_1.Enums
 {
     /// <summary>
     /// Коробка передач
     /// </summary>
-    [Flags]
     public enum TransmissionType
     {
         /// <summary>

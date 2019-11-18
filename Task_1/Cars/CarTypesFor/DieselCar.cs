@@ -3,7 +3,6 @@ using Task_1.Enums;
 
 namespace Task_1
 {
-    //дизельный
     public class DieselCar : FuelCar
     {
         //тип топлива
@@ -20,7 +19,7 @@ namespace Task_1
 
         public override void Run()
         {
-            Console.WriteLine("Дизельный авто");
+            Console.WriteLine("Дизельное авто");
         }
     }
 }

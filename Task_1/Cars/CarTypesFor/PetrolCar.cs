@@ -1,8 +1,8 @@
-﻿using Task_1.Enums;
+﻿using System;
+using Task_1.Enums;
 
 namespace Task_1
 {
-    //бензиновый
     public class PetrolCar : FuelCar
     {
         //тип топлива
@@ -15,6 +15,11 @@ namespace Task_1
                   transmissionType, bodyType, manufacturer, fuelConsumption,
                   tankCapacity, numberOfCylinders, engineCapacity)
         {
+        }
+
+        public override void Run()
+        {
+            Console.WriteLine("Бензиновое авто");
         }
     }
 }

@@ -3,7 +3,6 @@ using Task_1.Enums;
 
 namespace Task_1
 {
-    //на газу
     public class GasCar : FuelCar
     {
         //тип топлива

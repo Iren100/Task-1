@@ -4,7 +4,7 @@ using Task_1.Cars.Interfases;
 
 namespace Task_1
 {
-    public class Car: IElement
+    public abstract class Car: IElement
     {
         public Guid Id { get; private set; }
 

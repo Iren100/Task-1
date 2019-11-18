@@ -5,7 +5,6 @@ using Task_1.Cars;
 
 namespace Task_1
 {
-    //гибридный
     public class HybridCar : FuelCar, IElectric
     {
         public string TypeBattery { get; set; }

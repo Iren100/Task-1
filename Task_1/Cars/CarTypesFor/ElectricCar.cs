@@ -5,7 +5,6 @@ using Task_1.Cars;
 
 namespace Task_1
 {
-    //электрический
     public class ElectricCar : Car, IElectric
     {
         public string TypeBattery { get; set; }
@@ -23,7 +22,7 @@ namespace Task_1
 
         public override void Run()
         {
-            Console.WriteLine("Электрический авто");
+            Console.WriteLine("Электрическое авто");
         }
     }
 }
