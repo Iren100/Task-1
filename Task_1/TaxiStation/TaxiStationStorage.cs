@@ -5,11 +5,11 @@ using Task_1.Cars.Interfases;
 
 namespace Task_1.Cars
 {
-    public class TaksoParkStorage: ITaksoParkStorage, ICarList
+    public class TaxiStationStorage: ITaxiStationStorage, IList
     {
         public ICollection<Car> Items { get; private set; }
 
-        public TaksoParkStorage(ICollection<Car> items)
+        public TaxiStationStorage(ICollection<Car> items)
         {
             Items = items;
         }
@@ -30,20 +30,20 @@ namespace Task_1.Cars
 
         public void RemoveCar(Guid id)
         {
-            Items.Remove(CarFindById(id));
+            Items.Remove(FindCarById(id));
         }
 
-        public Car CarFindById(Guid id)
+        public Car FindCarById(Guid id)
         {
             return Items.Where(f => f.Id == id).First();
         }
 
-        public IEnumerable<Car> CarsFindByName(string name)
+        public IEnumerable<Car> FindCarsByName(string name)
         {
             return Items.Where(f => f.Name == name).ToList();
         }
 
-        public long CalculateCarsSumPrice()
+        public decimal CalculateCarsSumPrice()
         {
             long sum = 0;
             foreach (Car car in Items)
@@ -51,7 +51,7 @@ namespace Task_1.Cars
             return sum;
         }
 
-        public IEnumerable<Car> FindSpeed(int min, int max)
+        public IEnumerable<Car> FindCarsBySpeed(int min, int max)
         {
             List<Car> carSelection = new List<Car>();
             foreach (Car car in Items)
@@ -62,7 +62,7 @@ namespace Task_1.Cars
             return carSelection;
         }
 
-        public IEnumerable<Car> SortFuel()
+        public IEnumerable<Car> SortCarsByFuel()
         {
             List<Car> Cars = new List<Car>();
             if (Items.Count() == 0)

@@ -2,28 +2,28 @@
 namespace Task_1.Enums
 {
     /// <summary>
-    /// Тип кузова
+    /// Body type
     /// </summary>
     public enum BodyType
     {
         /// <summary>
-        /// Седан
+        /// sedan
         /// </summary>
         Sedan = 1,
         /// <summary>
-        /// Хэтчбeк
+        /// hatchback
         /// </summary>
         Hatchback = 2,
         /// <summary>
-        /// Универсал
+        /// station wagon
         /// </summary>
         Wagon = 3,
         /// <summary>
-        /// Кроссовер(джип)
+        /// crossover(jeep)
         /// </summary>
         Crossover = 4,
         /// <summary>
-        /// Минивен
+        /// minivan
         /// </summary>
         Minivan = 5       
     }

@@ -2,24 +2,24 @@
 namespace Task_1.Enums
 {
     /// <summary>
-    /// Коробка передач
+    /// Transmission
     /// </summary>
     public enum TransmissionType
     {
         /// <summary>
-        /// Механическая
+        /// mechanical
         /// </summary>
         Manual = 1,
         /// <summary>
-        /// Автоматическая
+        /// automatic
         /// </summary>
         Automatic = 2,
         /// <summary>
-        /// Роботизированная
+        /// robotic
         /// </summary>
         Robotic = 3,
         /// <summary>
-        /// Вариатор
+        /// variable speed drive
         /// </summary>
         CVT = 4     
     }

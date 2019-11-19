@@ -43,29 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cars\ConcreteCar\Bus.cs" />
-    <Compile Include="Cars\CarBuilders\CarBuilders.cs" />
-    <Compile Include="Cars\CarTypesFor\Base\FuelCar.cs" />
-    <Compile Include="Cars\CarBuilders\ElectricCarBuilder.cs" />
-    <Compile Include="Cars\CarBuilders\FuelCarBuilder.cs" />
+    <Compile Include="Cars\CarTypesFor\Bus.cs" />
+    <Compile Include="Cars\CarTypesFor\Base\Fuel.cs" />
+    <Compile Include="Cars\Builders\ElectricBuilder.cs" />
+    <Compile Include="Cars\Builders\FuelBuilder.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Car.cs" />
-    <Compile Include="Cars\CarBuilders\CarBuilder.cs" />
+    <Compile Include="Cars\Builders\Builder.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Enums\FuelType.cs" />
-    <Compile Include="Cars\CarTypesFor\HybridCar.cs" />
+    <Compile Include="Cars\CarTypesFor\Hybrid.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Enums\Manufacturer.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Enums\TransmissionType.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Enums\BodyType.cs" />
-    <Compile Include="Cars\CarTypesFor\ElectricCar.cs" />
-    <Compile Include="Cars\CarTypesFor\DieselCar.cs" />
-    <Compile Include="Cars\CarTypesFor\Base\ICarList.cs" />
-    <Compile Include="Cars\CarTypesFor\Base\IElectric.cs" />
+    <Compile Include="Cars\CarTypesFor\Electric.cs" />
+    <Compile Include="Cars\CarTypesFor\Diesel.cs" />
+    <Compile Include="Cars\CarTypesFor\Base\IList.cs" />
     <Compile Include="Cars\CarTypesFor\Base\IElement.cs" />
-    <Compile Include="Cars\CarTypesFor\Base\IFuel.cs" />
-    <Compile Include="Cars\ConcreteCar\IPassenger.cs" />
-    <Compile Include="Cars\TaksoPark\ITaksoParkStorage.cs" />
-    <Compile Include="Cars\CarTypesFor\PetrolCar.cs" />
-    <Compile Include="Cars\CarTypesFor\GasCar.cs" />
-    <Compile Include="Cars\TaksoPark\TaksoParkStorage.cs" />
+    <Compile Include="Cars\CarTypesFor\IPassenger.cs" />
+    <Compile Include="TaxiStation\ITaxiStationStorage.cs" />
+    <Compile Include="Cars\CarTypesFor\Petrol.cs" />
+    <Compile Include="Cars\CarTypesFor\Gas.cs" />
+    <Compile Include="TaxiStation\TaxiStationStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,56 +2,56 @@
 namespace Task_1.Enums
 {
     /// <summary>
-    /// Производитель
+    /// Manufacturer
     /// </summary>
     public enum Manufacturer
-    {      
+    {
         /// <summary>
-        /// Альфа Ромео
+        /// Alfa Romeo
         /// </summary>
         AlfaRomeo,
         /// <summary>
-        /// Ауди
+        /// Audi
         /// </summary>
         Audi,
         /// <summary>
-        /// БМВ
+        /// BMW
         /// </summary>
         BMW,
         /// <summary>
-        /// Ситроен
+        /// Citroen
         /// </summary>
         Citroen,
         /// <summary>
-        /// Киа
+        /// Kia
         /// </summary>
         Kia,
         /// <summary>
-        /// Мазда
+        /// Mazda
         /// </summary>
         Mazda,
         /// <summary>
-        /// Мерседес
+        /// МMercedes
         /// </summary>
         MercedesBenz,
         /// <summary>
-        /// Ниссан
+        /// Nissan
         /// </summary>
         Nissan,
         /// <summary>
-        /// Шкода
+        /// Skoda
         /// </summary>
         Skoda,
         /// <summary>
-        /// Пежо
+        /// Peugeot
         /// </summary>
         Peugeot,
         /// <summary>
-        /// Рено
+        /// Renault
         /// </summary>
         Renault,
         /// <summary>
-        /// Фольксваген
+        /// Volkswagen
         /// </summary>
         Volkswagen
     }

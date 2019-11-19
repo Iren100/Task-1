@@ -2,20 +2,20 @@
 namespace Task_1.Enums
 {
     /// <summary>
-    /// Тип кузова
+    /// Fuel Type
     /// </summary>
     public enum FuelType
     {
         /// <summary>
-        /// Бензин
+        /// petrol
         /// </summary>
         Gasoline = 1,
         /// <summary>
-        /// Газ
+        /// gas
         /// </summary>
         Gas = 2,
         /// <summary>
-        /// Дизельное
+        /// diesel
         /// </summary>
         Diesel = 3      
     }

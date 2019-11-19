@@ -2,7 +2,7 @@
 
 namespace Task_1.Cars.Interfases
 {
-    interface ICarList
+    interface IList
     {
         ICollection<Car> Items { get; }
     }
