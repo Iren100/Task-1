@@ -3,7 +3,7 @@ using Task_1.Enums;
 
 namespace Task_1
 {
-    public class PetrolCar : Fuel
+    public class Petrol : Fuel
     {
         public const FuelType TypeFuel = FuelType.Gasoline;
 

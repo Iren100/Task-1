@@ -3,83 +3,83 @@ using Task_1.Enums;
 
 namespace Task_1
 {
-    public class FuelBuilder
+    public class GasBuilder
     {
-        private Fuel _fuel;
-        public FuelBuilder()
+        private Gas _fuel;
+        public GasBuilder()
         {
-            _fuel = new Fuel();
+            _fuel = new Gas();
         }
-        public FuelBuilder SetId(Guid id)
+        public GasBuilder SetId(Guid id)
         {
             _fuel.Id = id;
             return this;
         }
-        public FuelBuilder SetName(string name)
+        public GasBuilder SetName(string name)
         {
             _fuel.Name = name;
             return this;
         }
-        public FuelBuilder SetYear(int year)
+        public GasBuilder SetYear(int year)
         {
             _fuel.Year = year;
             return this;
         }
-        public FuelBuilder SetPrice(int price)
+        public GasBuilder SetPrice(int price)
         {
             _fuel.Price = price;
             return this;
         }
-        public FuelBuilder SetMaxSpeed(int maxSpeed)
+        public GasBuilder SetMaxSpeed(int maxSpeed)
         {
             _fuel.MaxSpeed = maxSpeed;
             return this;
         }
-        public FuelBuilder SetSeatsNumber(int seatsNumber)
+        public GasBuilder SetSeatsNumber(int seatsNumber)
         {
             _fuel.SeatsNumber = seatsNumber;
             return this;
         }
-        public FuelBuilder SetTransmissionType(TransmissionType transmissionType)
+        public GasBuilder SetTransmissionType(TransmissionType transmissionType)
         {
             _fuel.TransmissionType = transmissionType;
             return this;
         }
-        public FuelBuilder SetBodyType(BodyType bodyType)
+        public GasBuilder SetBodyType(BodyType bodyType)
         {
             _fuel.BodyType = bodyType;
             return this;
         }
-        public FuelBuilder SetManufacturer(Manufacturer manufacturer)
+        public GasBuilder SetManufacturer(Manufacturer manufacturer)
         {
             _fuel.Manufacturer = manufacturer;
             return this;
         }
-        public FuelBuilder SetFuelConsumption(int fuelConsumption)
+        public GasBuilder SetFuelConsumption(int fuelConsumption)
         {
             _fuel.FuelConsumption = fuelConsumption;
             return this;
         }
-        public FuelBuilder SetTankCapacity(int tankCapacity)
+        public GasBuilder SetTankCapacity(int tankCapacity)
         {
             _fuel.TankCapacity = tankCapacity;
             return this;
         }
-        public FuelBuilder SetNumberOfCylinders(int numberOfCylinders)
+        public GasBuilder SetNumberOfCylinders(int numberOfCylinders)
         {
             _fuel.NumberOfCylinders = numberOfCylinders;
             return this;
         }
-        public FuelBuilder SetEngineCapacity(int engineCapacity)
+        public GasBuilder SetEngineCapacity(int engineCapacity)
         {
             _fuel.EngineCapacity = engineCapacity;
             return this;
         }
-        public Fuel Build()
+        public Gas Build()
         {
             return _fuel;
         }
-        public static implicit operator Fuel(FuelBuilder builder)
+        public static implicit operator Gas(GasBuilder builder)
         {
             return builder._fuel;
         }

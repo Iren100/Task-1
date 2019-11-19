@@ -43,10 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cars\Builders\HybridBuilder.cs" />
+    <Compile Include="Cars\Builders\PetrolBuilder.cs" />
+    <Compile Include="Cars\Builders\GasBuilder.cs" />
     <Compile Include="Cars\CarTypesFor\Bus.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Fuel.cs" />
     <Compile Include="Cars\Builders\ElectricBuilder.cs" />
-    <Compile Include="Cars\Builders\FuelBuilder.cs" />
+    <Compile Include="Cars\Builders\DieselBuilder.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Car.cs" />
     <Compile Include="Cars\Builders\Builder.cs" />
     <Compile Include="Cars\CarTypesFor\Base\Enums\FuelType.cs" />
