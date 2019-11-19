@@ -27,9 +27,9 @@ namespace Task_1
                 .SetManufacturer(Manufacturer.Nissan).SetFuelConsumption(6).SetTankCapacity(100).SetNumberOfCylinders(3).SetEngineCapacity(5);
 
             Console.WriteLine("TaxiStorage:");
-            Console.WriteLine(dieselCar.Name + " " + dieselCar.Year + " " + dieselCar.TankCapacity);
-            Console.WriteLine(electricCar.Name + " " + electricCar.Year + " " + electricCar.TypeBattery);
-            Console.WriteLine(hybridCar.Name + " " + hybridCar.Year + " " + hybridCar.TankCapacity + " " + electricCar.TypeBattery);
+            Console.WriteLine(dieselCar.Name + " " + dieselCar.Price + " " + dieselCar.MaxSpeed + " " + dieselCar.FuelConsumption);
+            Console.WriteLine(electricCar.Name + " " + electricCar.Price + " " + electricCar.MaxSpeed + " " + electricCar.FuelConsumption);
+            Console.WriteLine(hybridCar.Name + " " + + hybridCar.Price + " " + electricCar.MaxSpeed + " " + electricCar.FuelConsumption);
 
             taxiStorage.AddCars(new List<Car>() { dieselCar, electricCar, hybridCar });
 
@@ -38,7 +38,7 @@ namespace Task_1
             decimal carsSumPrice = taxiStorage.CalculateCarsSumPrice();
             Console.WriteLine($"Autopark sum price: ${carsSumPrice}" + "\r\n");
 
-            Console.WriteLine("Finding for speeds:");
+            Console.WriteLine("Finding for speeds(100-190):");
             IEnumerable<Car> carsBySpeed = taxiStorage.FindCarsBySpeed(100, 190);
             if (carsBySpeed.Count() == 0)
             {
