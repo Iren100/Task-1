@@ -14,7 +14,7 @@ namespace Task_1
 
             Guid id = new Guid();
 
-            Diesel dieselCar = new DieselBuilder().SetId(id).SetName("Auto1").SetYear(2012).SetPrice(10000).SetMaxSpeed(120)
+            Diesel dieselCar = new FuelBuilder<Diesel>().SetId(id).SetName("Auto1").SetYear(2012).SetPrice(10000).SetMaxSpeed(120)
                 .SetSeatsNumber(1).SetTransmissionType(TransmissionType.Automatic).SetBodyType(BodyType.Crossover)
                 .SetManufacturer(Manufacturer.Skoda).SetFuelConsumption(10).SetTankCapacity(5).SetNumberOfCylinders(4).SetEngineCapacity(100);
 
