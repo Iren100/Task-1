@@ -29,7 +29,7 @@ namespace Task_1
             Console.WriteLine("TaxiStorage:");
             Console.WriteLine(dieselCar.Name + " " + dieselCar.Price + " " + dieselCar.MaxSpeed + " " + dieselCar.FuelConsumption);
             Console.WriteLine(electricCar.Name + " " + electricCar.Price + " " + electricCar.MaxSpeed + " " + electricCar.FuelConsumption);
-            Console.WriteLine(hybridCar.Name + " " + + hybridCar.Price + " " + electricCar.MaxSpeed + " " + electricCar.FuelConsumption);
+            Console.WriteLine(hybridCar.Name + " " + hybridCar.Price + " " + electricCar.MaxSpeed + " " + electricCar.FuelConsumption);
 
             taxiStorage.AddCars(new List<Car>() { dieselCar, electricCar, hybridCar });
 
