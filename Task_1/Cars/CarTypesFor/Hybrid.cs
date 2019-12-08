@@ -1,7 +1,4 @@
 ﻿using System;
-using Task_1.Enums;
-using Task_1.Cars.Interfases;
-using Task_1.Cars;
 
 namespace Task_1
 {
