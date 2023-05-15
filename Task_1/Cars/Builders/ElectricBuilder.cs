@@ -10,9 +10,9 @@ namespace Task_1
         {
             _electric = new Electric();
         }
-        public ElectricBuilder SetId(Guid id)
+        public ElectricBuilder SetId(Guid ids)
         {
-            _electric.Id = id;
+            _electric.Id = ids;
             return this;
         }
         public ElectricBuilder SetName(string name)
